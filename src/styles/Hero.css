@@ -65,13 +65,33 @@
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Gradient background for hover (hidden initially) */
+.btn-resume::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--primary-glow));
+    z-index: -1;
+    transition: opacity 0.3s;
+    opacity: 0;
 }
 
 .btn-resume:hover {
-    background: var(--accent);
     color: #fff;
+    border-color: transparent;
     box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.4);
     transform: translateY(-3px);
+}
+
+.btn-resume:hover::before {
+    opacity: 1;
 }
 
 .hero-img-wrapper {
