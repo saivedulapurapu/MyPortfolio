@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import ProfileImg from '../assets/profile.png';
+import ProfileImg from '../assets/profile.jpg';
 import '../styles/Hero.css';
 
 const Hero = () => {
