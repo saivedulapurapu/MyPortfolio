@@ -296,9 +296,9 @@
     .hero-image-container {
         flex: auto;
         width: 100%;
-        /* Reset Lift for Mobile to prevent overlap */
-        top: 0;
-        margin-top: 3rem;
+        /* Force Reset Lift for Mobile with !important */
+        top: 0 !important;
+        margin-top: 5rem !important;
     }
 
     .hero-img-wrapper {
