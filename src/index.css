@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap');
+
+:root {
+  /* Vibrant Palette */
+  --primary: #2563eb;
+  --primary-glow: #3b82f6;
+  --secondary: #d946ef;
+  --secondary-glow: #e879f9;
+  --accent: #22d3ee;
+  /* Cyan - brighter */
+
+  --bg-dark: #000000;
+  /* Lighter card background for visibility */
+  --bg-card: rgba(30, 30, 35, 0.8);
+
+  --text-main: #ffffff;
+  --text-muted: #e5e7eb;
+  /* Very light gray for max readability */
+
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --accent-glow: rgba(37, 99, 235, 0.5);
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 6rem;
+
+  /* Transitions */
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Background gradient - slightly subtler so cards pop */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(217, 70, 239, 0.15) 0%, transparent 40%);
+  z-index: -2;
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Outfit', sans-serif;
+  color: #fff;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-speed);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.card {
+  background: #111;
+  /* Fallback */
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Visible border */
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,113 @@
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.skill-category {
+    background: rgba(30, 30, 35, 0.6);
+    /* Lighter gray */
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Stronger border */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding: 2.5rem;
+    /* Restored padding */
+}
+
+/* Rotating RGB Border Effect */
+.skill-category::before {
+    content: '';
+    position: absolute;
+    /* Move to top so it's visible, but masked */
+    z-index: 2;
+    /* Expand outside the card by 2px */
+    inset: -2px;
+    padding: 2px;
+    /* Border thickness */
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    border-radius: 22px;
+    /* Card radius (20px) + inset (2px) */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: glowing 20s linear infinite;
+    pointer-events: none;
+    /* Let clicks pass through */
+
+    /* Hollow out the center */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.skill-category:hover::before {
+    opacity: 1;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    background: rgba(40, 40, 45, 0.8);
+    border-color: transparent;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(125, 0, 255, 0.2);
+}
+
+.skill-category h3 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.skill-category h3 svg {
+    color: var(--primary-glow);
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
