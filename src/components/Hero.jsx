@@ -80,6 +80,9 @@ const Hero = () => {
                     <div className="hero-img-wrapper">
                         <img src={ProfileImg} alt="Sai Vedulapurapu" className="hero-img" />
                     </div>
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-resume">
+                        View Resume
+                    </a>
                 </motion.div>
             </div>
         </section>

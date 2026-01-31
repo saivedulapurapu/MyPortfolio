@@ -41,10 +41,37 @@
 .hero-image-container {
     flex: 0 0 400px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 2rem;
     position: relative;
     /* Reliable Lift using Top Offset */
     top: -80px;
+}
+
+.btn-resume {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 0.8rem 2.5rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.4);
+    transform: translateY(-3px);
 }
 
 .hero-img-wrapper {
