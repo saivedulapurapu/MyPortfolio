@@ -80,7 +80,7 @@ const Hero = () => {
                     <div className="hero-img-wrapper">
                         <img src={ProfileImg} alt="Sai Vedulapurapu" className="hero-img" />
                     </div>
-                    <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noopener noreferrer" className="btn btn-resume">
+                    <a href={`${import.meta.env.BASE_URL}Sai_Vedulapurapu_Resume.pdf`} target="_blank" rel="noopener noreferrer" className="btn btn-resume">
                         View Resume
                     </a>
                 </motion.div>
