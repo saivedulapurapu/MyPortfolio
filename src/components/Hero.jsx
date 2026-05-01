@@ -31,7 +31,7 @@ const Hero = () => {
                         transition={{ duration: 0.7, delay: 0.3 }}
                         className="hero-subtitle"
                     >
-                        Aspiring <span>Backend</span> & <span>Data Engineer</span>
+                        Aspiring <span>Data Engineer</span> & <span>Analyst</span>
                     </motion.h2>
 
                     <motion.p
