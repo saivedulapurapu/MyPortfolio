@@ -4,34 +4,37 @@ import '../styles/Projects.css';
 
 const projectsData = [
     {
-        title: "AEGIS AI",
-        tech: "Python, FastAPI, Docker, PostgreSQL",
+        title: "GritOS: Intelligent Operational & Financial Analytics Platform",
+        tech: "Python, FastAPI, Next.js, Tailwind CSS, Groq API",
         description: [
-            "Developed an API-based backend application for business decision making.",
-            "Implemented RESTful endpoints for structured data ingestion.",
-            "Used Docker for containerization and PostgreSQL for data management."
+            "Architected a full-stack financial analytics platform with Next.js/Tailwind frontend and FastAPI backend.",
+            "Built a Shock Engine to simulate adverse market scenarios and visualize margin and runway impacts.",
+            "Designed a Capital Lock Index algorithm to track inventory liquidity and flag trapped capital.",
+            "Integrated LLaMA 3 via Groq API as an AI advisor for data-driven cost and growth recommendations."
         ],
-        link: "https://github.com/saivedulapurapu/Agentic-AI-Business-Decision-Maker.git"
+        link: "https://github.com/saivedulapurapu/GritOS"
     },
     {
-        title: "Multi-Threaded Web Crawler",
-        tech: "C, Pthreads, Mutex",
+        title: "SentientQ: Quantum-Powered Sentiment & Reputation Engine",
+        tech: "Python, FastAPI, VQC, HTML/CSS/JS",
         description: [
-            "Built a concurrent web crawler in C to fetch pages efficiently.",
-            "Applied multithreading to improve performance.",
-            "Demonstrated strong understanding of OS concepts and synchronization."
+            "Built a full-stack NLP app with a FastAPI backend and quantum computing layer for sentiment analysis.",
+            "Designed a 2-qubit Variational Quantum Circuit (VQC) using PennyLane for text classification.",
+            "Developed a real-time dashboard visualizing sentiment patterns and quantum measurement outputs.",
+            "Applied Trace-Purity metrics on D2C brand reviews to compute reputation and stability scores."
         ],
-        link: "https://github.com/saivedulapurapu/Multi-Threaded-Web-Crawler-Using-C.git"
+        link: "https://github.com/saivedulapurapu/SentientQ"
     },
     {
-        title: "Spice Stories",
-        tech: "React, Python, JSON ETL",
+        title: "Full-Stack Fraud Analysis Platform",
+        tech: "Python, FastAPI, Streamlit, SQLite",
         description: [
-            "Designed a recipe-based web platform with focus on usability.",
-            "Implemented ETL workflow to extract and normalize recipe data.",
-            "Backend services currently under development."
+            "Built a scalable FastAPI backend for real-time transaction scoring and model updates.",
+            "Designed a Streamlit dashboard to monitor transactions, visualize patterns, and flag suspicious activity.",
+            "Implemented a SQLite data layer to manage user profiles, transaction histories, and feedback logs.",
+            "Integrated data simulation, RESTful endpoints, and automated testing for a fault-tolerant workflow."
         ],
-        link: "https://github.com/saivedulapurapu/SpiceStories.git"
+        link: "https://github.com/saivedulapurapu/UserSpecified_FraudDetector"
     }
 ];
 
